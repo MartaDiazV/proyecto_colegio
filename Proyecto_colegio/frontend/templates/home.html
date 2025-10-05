@@ -1,11 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>hola mundo</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Inicio - Colegio Boston{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="hero d-flex align-items-center justify-content-center text-center">
+    <div>
+        <h1>Bienvenido al Colegio Boston</h1>
+        <p>Formando líderes con valores y excelencia académica</p>
+    </div>
+</section>
+
+<!-- Sobre Nosotros -->
+<section class="about text-center">
+    <h2>¿Quiénes somos?</h2>
+    <p>Somos un colegio presencial comprometido con el desarrollo integral de nuestros estudiantes, fomentando valores, disciplina y excelencia académica.</p>
+</section>
+
+<!-- Infraestructura -->
+<section class="facilities text-center">
+    <h2>Infraestructura</h2>
+    <div class="gallery">
+        <img src="{% static 'img/infra1.jpg' %}" alt="Infraestructura 1">
+        <img src="{% static 'img/infra2.jpg' %}" alt="Infraestructura 2">
+        <img src="{% static 'img/infra3.jpg' %}" alt="Infraestructura 3">
+    </div>
+</section>
+
+<!-- Comunidad -->
+<section class="community text-center">
+    <h2>Nuestra Comunidad</h2>
+    <p>Fomentamos un ambiente de respeto y colaboración entre estudiantes, docentes y apoderados, promoviendo actividades extracurriculares y proyectos sociales.</p>
+</section>
+{% endblock %}
